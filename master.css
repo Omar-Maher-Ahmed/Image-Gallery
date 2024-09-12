@@ -1,0 +1,65 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;  /*  to removes any default margin around the body. */
+    padding: 0; /*  to removes any default margin around the body. */
+    background-color: #494949c0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows flexible elements (gallery elements) to wrap on multiple lines */
+    gap: 10px; /* sets a 10-pixel gap between flex items. */
+    padding: 20px; /* A distance is given from the outside of the exhibition */
+    justify-content: center; /* Centers the elements horizontally in relation to the container */
+}
+
+.gallery-item {
+    position: relative; /* to be positioned relative to the gallery item. */
+    overflow: hidden; /* ensures that any content overflowing the gallery item will be hidden. */
+    border-radius: 8px; /* rounds the corners of the gallery item with an 8-pixel radius. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* applies a subtle shadow to the gallery item, giving it a slight elevation */
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for larger screens */
+}
+
+.gallery-item img {
+    width: 100%; /* the full width of its container. */
+    height: auto; /* keeps the aspect ratio of the image intact. */
+    display: block; /* removes any default inline spacing around the image. */
+    transition: 0.7s ease; /* like scaling */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2); /* slightly enlarges the image when the gallery item is hovered. */
+}
+
+.caption {
+    position:absolute; /* to be positioned relative to the gallery item. */
+    bottom: 0; /*From the bottom */
+    left: 0; /* From the left */
+    width: 100%; /*makes the caption span the full width of the */
+    background: rgba(0, 0, 0, 0.7); /* gives the caption a semi-transparent black background. */
+    color: white; /* text color to white */
+    text-align: center; /* centers the text horizontally within the caption. */
+    padding: 10px;/* padding inside the caption. */
+    font-size: 14px; /* sets the font size to 14 pixels */
+    box-sizing: border-box; /* ensures that padding is included in the element's total width and height. */
+    opacity: 0; /* makes the caption initially invisible. */
+    transition: 0.3s ease; /* smoothly transitions the opacity change over 0.3 seconds. */
+
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* makes the caption fully visible when the gallery item is hovered. */ 
+}
+
+footer
+{
+    background-color: 494949c0;
+    color: rgba(39, 31, 31, 0.764);
+    text-align: center;
+    padding: 1px 0;
+    margin: 2px 0;
+
+}
